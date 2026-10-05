@@ -1,0 +1,108 @@
+import { Page, Locator } from "@playwright/test";
+import { BasePage } from "./base.page";
+export class TrainingSchedulingPage extends BasePage {
+    // Locators
+    readonly createNew: Locator;
+    readonly search: Locator;
+    readonly fromDate: Locator;
+    readonly toDate: Locator;
+    readonly activeFilter: Locator;
+    readonly fetchButton: Locator;
+    readonly clearButton: Locator;  
+    readonly dropdownSearch: Locator;
+    readonly course: Locator;
+    readonly code: Locator;
+    readonly provider: Locator;
+    readonly providerLocation: Locator;
+    readonly startDate: Locator;
+    readonly endDate: Locator;
+    readonly fromTime: Locator;
+    readonly toTime: Locator;
+    readonly discount: Locator;
+    readonly discountByWho: Locator;
+    readonly fees: Locator;
+    readonly gstType: Locator;
+    readonly amountExcludeGst: Locator;
+    readonly funding: Locator;
+    readonly creditNote: Locator;
+    readonly creditNoteNumber: Locator;
+    readonly courseHours: Locator;
+    readonly invoiceNo: Locator;
+    readonly dateOfPayment: Locator;
+    readonly paymode: Locator;
+    readonly language: Locator;
+    readonly department: Locator;
+    readonly employeeType: Locator;
+    readonly courseOrganization: Locator;
+    readonly schedulingDate: Locator;
+    readonly zone: Locator;
+    readonly location: Locator;
+    readonly employeePopup: Locator;
+    readonly employeeSearch: Locator;
+    readonly employeeSelect: Locator;
+    readonly submit: Locator;
+    readonly cancel: Locator;
+    readonly status: Locator;
+    readonly template: Locator;
+    readonly saveAndClose: Locator;
+    readonly addButton: Locator;
+    readonly clearbtn: Locator;
+    readonly checkbox: Locator;
+    readonly alert: Locator;
+    readonly popupOk: Locator;
+    
+
+  constructor(page: Page) {
+    super(page);
+    this.createNew = page.locator("//input[@id='Create']");
+    this.search = page.locator("//input[@id='SearchString']");
+    this.fromDate = page.locator("//input[@id='from']");
+    this.toDate = page.locator("//input[@id='to']");
+    this.activeFilter = page.locator("//select[@id='DropDown']");
+    this.fetchButton = page.locator("//input[@id='searchstring']");   
+    this.clearButton = page.locator("//button[@id='clear']");
+    this.dropdownSearch = page.locator("//input[@class='select2-search__field']");
+    this.course = page.locator("//span[@id='select2-TrainingId-container']");
+    this.code = page.locator("//input[@id='Code']");
+    this.provider = page.locator("//span[@id='select2-ProviderId-container']");
+    this.providerLocation = page.locator("//span[@id='select2-TrainingVenue-container']");
+    this.startDate = page.locator("//input[@id='HeaderStartDate']");
+    this.endDate = page.locator("//input[@id='HeaderEndDate']");
+    this.fromTime = page.locator("//input[@id='FromTime']");
+    this.toTime = page.locator("//input[@id='ToTime']");
+    this.courseHours = page.locator("//input[@id='TrainingHours']");
+    this.discount = page.locator("//input[@id='Subsidy']");
+    this.discountByWho = page.locator("//input[@id='SubsidyByWho']");
+    this.fees = page.locator("//input[@id='Fees']");
+    this.gstType = page.locator("//span[@id='select2-GSTTypeId-container']");
+    this.amountExcludeGst = page.locator("//input[@id='Amount']");
+    this.funding = page.locator("//input[@id='Funding']");
+    this.creditNote = page.locator("//input[@id='Credit']");
+    this.creditNoteNumber = page.locator("//input[@id='CreditAmountNumber']");
+    this.invoiceNo = page.locator("//input[@id='InvoiceNumber']");
+    this.dateOfPayment = page.locator("//input[@id='DateOfPayment']");
+    this.paymode = page.locator("//span[@id='select2-PaymodeId-container']");
+    this.language = page.locator("//span[@id='select2-LanguageId-container']");
+    this.department = page.locator("//span[@id='select2-Department-container']");
+    this.employeeType = page.locator("//span[@id='select2-EmployeeType-container']");
+    this.courseOrganization = page.locator("//span[@id='select2-TrainingScheduling-container']");
+    this.schedulingDate = page.locator("//input[@id='TrainingSchedulingDate']");
+    this.zone = page.locator("//span[@id='select2-ZoneMaster-container']");
+    this.location = page.locator("//span[@id='select2-LocationMasters-container']");
+    this.employeePopup = page.locator("//input[@id='btnpopup']");
+    this.employeeSearch = page.locator("//input[@id='SearchString']");
+    this.employeeSelect = page.locator("(//table[@id='tblData_employee']//tbody//tr//td[normalize-space()='EMP-0293']//preceding::td[2]//input[@id='CheckOne'])");
+    this.submit = page.locator("//input[@id='Ok']");
+    this.cancel = page.locator("//input[@id='Cancel2']");
+    this.status = page.locator("//span[@id='select2-EmployeeTrainingStatusFilter-container']");
+    this.template = page.locator("//span[@id='select2-TemplateId-container']");
+    this.saveAndClose = page.locator("//button[@id='Create']");
+    this.addButton = page.locator("//input[@id='btnAddEmployees']");
+    this.clearbtn = page.locator("//button[@id='clear']");
+    this.checkbox = page.locator("//input[@id='checkall']");
+    this.alert = page.locator("//div[@id='popup_message']");
+    this.popupOk = page.locator("//input[@id='popup_ok']");
+  }
+
+
+}
